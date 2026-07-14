@@ -1,0 +1,187 @@
+/* ============================================================
+   SECTION 2: CLOUDS — parallax waves + pulau horizontal
+   ------------------------------------------------------------
+   Clouds scroll naik menutupi section sebelumnya via z-index + margin-top
+   negatif. Overlap-nya harus ADA (tepi atas .clouds-stage di-clip jadi
+   gelombang; area transparannya menampilkan section di belakangnya —
+   sekarang rumput .honest, jadi transisinya langit-di-atas-rumput).
+
+   Dulu -17vh: ditala agar clouds masuk viewport tepat saat hero di frame
+   224. Sejak .metrics & .honest disisipkan di antara hero dan clouds,
+   timing itu tidak berlaku lagi, dan -17vh justru memakan rumput .honest.
+
+   -10vh: HARUS lebih dalam dari titik terdalam #wavyTop (y=0.09 → 9vh),
+   kalau tidak, celah di bawah rumput .honest bocor jadi garis putih.
+   ============================================================ */
+.clouds {
+  position: relative;
+  z-index: 10; /* di atas section sebelumnya saat overlap */
+  height: 100vh;
+  margin-top: -10vh;
+  background: transparent;
+}
+
+/* Stage sticky — background solid supaya hero tidak menembus saat pulau
+   tampil. Tepi atas di-clip jadi kurva lewat SVG clipPath #wavyTop. */
+.clouds-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(180deg, #cfecff 0%, #a8d6ff 40%, #8ec5e9 100%);
+  clip-path: url(#wavyTop);
+  -webkit-clip-path: url(#wavyTop);
+}
+
+.wave {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  will-change: transform;
+}
+.wave-back {
+  z-index: 2;
+}
+.wave-front {
+  z-index: 3;
+}
+
+/* ---- Content: title + islands horizontal ---- */
+.clouds-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* Jangan dinaikkan: sisa ruang inilah tinggi .islands-viewport. Kalau
+     terlalu besar, kartu (art + label + offset zigzag) terpotong di laptop
+     berlayar pendek (mis. 1440×800). */
+  top: clamp(96px, 13vh, 170px);
+  bottom: clamp(32px, 5vh, 90px);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 3vh, 50px);
+  pointer-events: auto;
+}
+.islands-title {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: clamp(32px, 4.6vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: #0b2a4a;
+  margin: 0;
+  padding: 0 var(--pad-x);
+  text-align: center;
+  text-shadow: 0 2px 18px rgba(255, 255, 255, 0.5);
+}
+.islands-title em {
+  color: var(--accent-2);
+  font-style: italic;
+  font-weight: 800;
+}
+.islands-title .line {
+  display: block;
+}
+
+.islands-viewport {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 0; /* izinkan flex shrink */
+}
+.islands-track {
+  display: flex;
+  gap: clamp(20px, 3vw, 60px);
+  padding: 0 clamp(30px, 10vw, 160px);
+  will-change: transform;
+  align-items: flex-start;
+  height: 100%;
+}
+.island-card {
+  flex: 0 0 auto;
+  width: 33vw; /* desktop: ±2.5 pulau per viewport */
+  max-width: 460px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+/* Zigzag: kartu genap turun */
+.island-card:nth-child(even) {
+  margin-top: clamp(14px, 3vh, 48px);
+}
+.island-art {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  filter: drop-shadow(0 20px 28px rgba(11, 42, 74, 0.22));
+}
+.island-art img {
+  width: 88%;
+  height: auto;
+  max-height: clamp(150px, 30vh, 300px);
+  object-fit: contain;
+  display: block;
+}
+.island-label {
+  background: #fff4d9;
+  border-radius: 22px;
+  padding: 18px 26px 22px;
+  text-align: center;
+  width: 92%;
+  margin-top: -40px; /* label menimpa bagian bawah pulau */
+  position: relative;
+  z-index: 2;
+  box-shadow:
+    0 8px 0 #f0e2b8,
+    0 18px 30px rgba(11, 42, 74, 0.14);
+}
+.island-label h3 {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: clamp(16px, 1.7vw, 24px);
+  color: #ff4d1a;
+  margin: 0 0 6px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 0 rgba(255, 77, 26, 0.08);
+}
+.island-label p {
+  font-size: clamp(12px, 1vw, 15px);
+  color: #4e5d7a;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+/* Mobile: ±1.5 pulau per viewport */
+@media (max-width: 768px) {
+  .island-card {
+    width: 62vw;
+    min-width: 200px;
+  }
+  .island-card:nth-child(even) {
+    margin-top: 24px;
+  }
+  .island-art img {
+    max-height: 26vh;
+  }
+  .islands-track {
+    padding: 0 10vw;
+    gap: 16px;
+  }
+  .island-label {
+    padding: 14px 18px 18px;
+    margin-top: -30px;
+  }
+}

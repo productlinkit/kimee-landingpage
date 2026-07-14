@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# ============================================================
+# Aset yang SUDAH TIDAK DIPAKAI kode (~29MB) — sengaja tidak ikut di-push.
+# Filenya tetap ada di lokal; hapus baris terkait kalau mau ikut naik.
+#   public/animation   → frame sequence section "Feature #1" yang sudah dihapus
+#   public/animate.mp4 → sumber sequence di atas
+#   frog-hi / frog-cta → karakter katak, sudah diganti koala & kelinci
+# ============================================================
+public/animation/
+public/animate.mp4
+public/hero.png
+public/katak.png
+public/honest/frog-hi.webp
+public/cta/frog-cta.webp

@@ -1,0 +1,48 @@
+/* ============================================================
+   KIMEE LOGO — fixed top-center, persistent
+   ------------------------------------------------------------
+   Pemusatan dikerjakan .kimee-bar (flex), BUKAN transform — transform pada
+   .kimee-logo dipegang sepenuhnya GSAP (y & opacity), jadi tidak ada dua
+   pihak yang saling menimpa dan logo selalu tepat di tengah.
+   ============================================================ */
+.kimee-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.kimee-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  background: #fff;
+  border-radius: 0 0 26px 26px;
+  box-shadow:
+    0 16px 40px rgba(11, 42, 74, 0.22),
+    0 4px 12px rgba(11, 42, 74, 0.1);
+  pointer-events: auto;
+  /* State sebelum GSAP jalan (dan state final untuk reduced-motion). */
+  opacity: 0;
+  transform: translateY(-140%);
+  will-change: transform, opacity;
+}
+
+.kimee-logo img {
+  height: clamp(44px, 5.5vw, 76px);
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .kimee-logo {
+    padding: 10px 18px;
+    border-radius: 0 0 20px 20px;
+  }
+}

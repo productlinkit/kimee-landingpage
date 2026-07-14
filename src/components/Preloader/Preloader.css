@@ -1,0 +1,105 @@
+/* ============================================================
+   PRELOADER
+   ============================================================ */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #b2d5fb 0%, #85add7 55%, #69abf1 100%);
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 5vw, 24px);
+  transition:
+    opacity 0.7s var(--ease),
+    visibility 0.7s var(--ease);
+}
+#preloader.done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.pre-card {
+  background: #fff;
+  border-radius: 28px;
+  padding: clamp(28px, 7vw, 42px) clamp(22px, 6vw, 40px) clamp(26px, 6vw, 36px);
+  /* 100% (bukan 92vw): 92vw lebih lebar dari content box preloader setelah
+     dikurangi padding-nya, jadi kartunya meluber ke kanan dan tidak center. */
+  width: min(420px, 100%);
+  text-align: center;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  animation: preCardIn 0.6s var(--ease-out) both;
+}
+@keyframes preCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.pre-avatar {
+  width: clamp(88px, 26vw, 120px);
+  height: clamp(88px, 26vw, 120px);
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #eaf6ff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  animation: preAvatarPulse 1.8s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(94, 194, 106, 0.25);
+}
+.pre-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@keyframes preAvatarPulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.03);
+  }
+}
+.pre-title {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: clamp(22px, 2.4vw, 28px);
+  color: #0b2040;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.pre-sub {
+  font-size: 14px;
+  color: #6a8bb8;
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+.pre-bar {
+  height: 10px;
+  width: 100%;
+  background: #eaf1f9;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.pre-bar i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #3de39a 0%, #3498ff 100%);
+  border-radius: 99px;
+  transition: width 0.25s var(--ease);
+}
+.pre-percent {
+  margin-top: 12px;
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+  font-weight: 700;
+  color: #6a8bb8;
+}

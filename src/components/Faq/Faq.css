@@ -1,0 +1,101 @@
+/* ============================================================
+   SECTION 8: FAQ
+   ============================================================ */
+.faq {
+  --navy: #16305e;
+
+  position: relative;
+  z-index: 15;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(70px, 12vh, 130px) var(--pad-x);
+  background: #fff;
+}
+
+.faq-head {
+  max-width: 900px;
+  margin: 0 auto clamp(36px, 6vh, 64px);
+  text-align: center;
+}
+
+.faq-eyebrow {
+  margin: 0 0 14px;
+  font-size: clamp(10px, 0.8vw, 12px);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7ba7d8;
+}
+
+.faq-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(24px, 2.6vw, 38px);
+  line-height: 1.3;
+  color: var(--navy);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.6vh, 18px);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-item {
+  border-radius: 16px;
+  background: #eff6fe;
+  overflow: hidden;
+}
+
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: clamp(18px, 2.2vh, 24px) clamp(20px, 2.2vw, 28px);
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(14px, 1.15vw, 17px);
+  color: var(--navy);
+}
+
+.faq-chevron {
+  flex: none;
+  color: #43b04a;
+  transition: transform 0.35s var(--ease-out);
+}
+.faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* max-height (bukan height: auto) supaya bisa dianimasikan. Nilainya cukup
+   besar untuk menampung jawaban terpanjang. */
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-out);
+}
+.faq-item.is-open .faq-a {
+  max-height: 320px;
+}
+
+.faq-a p {
+  margin: 0;
+  padding: 0 clamp(20px, 2.2vw, 28px) clamp(20px, 2.4vh, 26px);
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.6;
+  color: #47649b;
+}

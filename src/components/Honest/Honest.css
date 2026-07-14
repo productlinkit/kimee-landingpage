@@ -1,0 +1,163 @@
+/* ============================================================
+   SECTION 1.6: THE HONEST TRUTH
+   ------------------------------------------------------------
+   Latar atas menyambung warna .metrics-tail, bagian bawahnya pemandangan
+   hijau (bg-bottom.webp). Kartu kuning memakai box-yellow.webp sebagai
+   background (background-size 100% 100% → ikut tinggi teksnya).
+
+   z-index di dalam .honest-scene:
+     0  bg (pemandangan)
+     1  karakter — badan bawahnya sengaja tertutup kartu
+     2  kartu kuning
+   ============================================================ */
+.honest {
+  --navy: #1e3f8f;
+
+  position: relative;
+  z-index: 5; /* di atas hero yang di-pin, sama seperti .metrics */
+  background: linear-gradient(180deg, #eef4fd 0%, #fbfdff 55%, #fdfeff 100%);
+  padding-top: clamp(24px, 5vh, 56px);
+  overflow: hidden;
+}
+
+/* ---- Copy ---- */
+.honest-copy {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  text-align: center;
+}
+
+.honest-eyebrow {
+  margin: 0 0 18px;
+  font-size: clamp(11px, 0.9vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.honest-title {
+  margin: 0 0 clamp(20px, 3vh, 32px);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(26px, 2.9vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+/* Tiap baris judul satu <span> → pemenggalannya sama seperti mockup. */
+.honest-title span {
+  display: block;
+}
+
+.honest-body {
+  max-width: 56ch;
+  margin: 0 auto;
+  font-size: clamp(13px, 1.05vw, 16px);
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* ---- Scene: pemandangan + katak + kartu ---- */
+/* padding-bottom = jarak dari kartu ke dasar section. Harus menampung
+   overlap .clouds (-8vh) PLUS sisa rumput yang masih terlihat di bawah
+   kartu — kalau terlalu kecil, kartu menempel ke langit .clouds. */
+.honest-scene {
+  position: relative;
+  margin-top: clamp(24px, 4vh, 48px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 var(--pad-x) clamp(110px, 13vw, 190px);
+}
+
+.honest-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  height: auto;
+  min-width: 900px; /* jaga proporsi pohon di layar sempit */
+  pointer-events: none;
+  user-select: none;
+}
+
+/* opacity 0 = titik awal; dinaikkan GSAP (useHonestChar) setelah kartu muncul.
+   Kalau JS mati, aturan .no-js di bawah yang menampilkannya. */
+.honest-char {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  width: clamp(140px, 15vw, 215px);
+  /* Kartu naik menutupi badan bawah karakter. */
+  margin-bottom: clamp(-72px, -5vw, -42px);
+}
+.honest-char img {
+  width: 100%;
+  height: auto;
+}
+
+.honest-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 760px;
+  padding: clamp(30px, 4vw, 52px) clamp(28px, 5vw, 72px)
+    clamp(34px, 4.5vw, 56px);
+  text-align: center;
+  /* Aset kartu dipakai sebagai background agar tingginya ikut isi teks. */
+  background: url('/honest/box-yellow.webp') 50% 50% / 100% 100% no-repeat;
+}
+
+.honest-card-title {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(22px, 2.4vw, 34px);
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.honest-card-cta {
+  display: inline-block;
+  margin-top: clamp(18px, 2.4vh, 26px);
+  padding: 13px 28px;
+  border-radius: 99px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(13px, 1vw, 15px);
+  box-shadow: 0 8px 20px rgba(94, 194, 106, 0.35);
+  transition:
+    background 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+.honest-card-cta:hover {
+  background: var(--primary-deep);
+  transform: translateY(-2px);
+}
+
+.honest-card-body {
+  margin: 0 auto;
+  max-width: 52ch;
+  font-size: clamp(13px, 1.1vw, 16px);
+  font-weight: 600;
+  line-height: 1.55;
+  color: #2b2b2b;
+}
+
+@media (max-width: 700px) {
+  .honest-char {
+    margin-bottom: -38px;
+  }
+  .honest-card {
+    /* Sudut aset jadi terlalu lonjong kalau kartunya tinggi & sempit —
+       di layar kecil pakai bentuk sendiri dengan warna yang sama. */
+    background: #f2dfa4;
+    border-radius: 28px;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.06);
+  }
+}

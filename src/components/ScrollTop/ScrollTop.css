@@ -1,0 +1,51 @@
+/* ============================================================
+   TOMBOL SCROLL-TO-TOP (floating, kanan bawah)
+   ============================================================ */
+.scroll-top {
+  position: fixed;
+  right: clamp(16px, 2.4vw, 34px);
+  bottom: clamp(16px, 2.4vw, 34px);
+  z-index: 90; /* di bawah logo (100), di atas semua section */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(48px, 3.6vw, 58px);
+  height: clamp(48px, 3.6vw, 58px);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  /* Cincin putih: tombolnya hijau dan .sparky juga hijau — tanpa ini
+     tombolnya nyaris hilang di section itu. */
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.9),
+    0 12px 28px rgba(11, 42, 74, 0.28);
+
+  /* Tersembunyi sampai user melewati satu layar. */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px) scale(0.9);
+  transition:
+    opacity 0.3s var(--ease-out),
+    transform 0.3s var(--ease-out),
+    visibility 0.3s,
+    background 0.25s var(--ease);
+}
+
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.scroll-top:hover {
+  background: var(--primary-deep);
+  transform: translateY(-3px);
+}
+
+.scroll-top .material-symbols-rounded {
+  font-size: clamp(22px, 1.8vw, 28px);
+  line-height: 1;
+}

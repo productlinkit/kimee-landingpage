@@ -1,0 +1,21 @@
+/* ============================================================
+   SCROLL PROGRESS — strip tipis di sisi kanan
+   ============================================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100vh;
+  background: transparent;
+  z-index: 200;
+  pointer-events: none;
+}
+.scroll-progress i {
+  display: block;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(94, 194, 106, 0.5);
+}

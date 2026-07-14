@@ -1,0 +1,190 @@
+/* ============================================================
+   SECTION 4: MEET SPARKY
+   ------------------------------------------------------------
+   Stage sticky + di-pin GSAP; tinggi section = panjang scroll timeline.
+
+   Elemen dipusatkan lewat left/top saja — pergeseran -50%-nya di-set GSAP
+   (xPercent/yPercent), bukan translate() di CSS, supaya tidak bentrok dengan
+   x/y/scale yang dianimasikan timeline.
+   ============================================================ */
+.sparky {
+  position: relative;
+  z-index: 11; /* di atas .clouds (10) yang di-pin sebelum ini */
+  height: 300vh;
+  background: #4caf50;
+}
+
+.sparky-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #4caf50;
+}
+
+/* ---- Teks raksasa di belakang device ---- */
+.sparky-marquee {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  z-index: 1;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(110px, 21vw, 320px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #8de490;
+  will-change: transform;
+  user-select: none;
+}
+
+/* ---- Pohon (kanan = cermin, di-scaleX(-1) oleh GSAP) ---- */
+.sparky-tree {
+  position: absolute;
+  bottom: -4vh;
+  z-index: 2;
+  width: clamp(220px, 30vw, 560px);
+  height: auto;
+  will-change: transform;
+  pointer-events: none;
+}
+.sparky-tree-left {
+  left: -3vw;
+}
+.sparky-tree-right {
+  right: -3vw;
+}
+
+/* ---- Podium & device ---- */
+.sparky-podium {
+  position: absolute;
+  left: 50%;
+  top: 72%;
+  z-index: 2;
+  width: min(36vw, 440px);
+  height: auto;
+  will-change: transform, opacity;
+}
+
+.sparky-device {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  z-index: 3;
+  width: min(56vw, 760px);
+  height: auto;
+  will-change: transform;
+}
+
+/* ---- GIF katak: naik dari bawah section, loop jalan sendiri ---- */
+.sparky-frog {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  z-index: 5; /* di depan pohon & copy */
+  width: clamp(230px, 26vw, 380px);
+  height: auto;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* ---- Copy (muncul di fase akhir) ---- */
+.sparky-copy {
+  position: absolute;
+  left: 50%;
+  /* Cukup tinggi supaya GIF katak di bawahnya tidak tertutup teks. */
+  top: 40%;
+  z-index: 4;
+  width: min(1000px, 88vw);
+  text-align: center;
+  color: #fff;
+}
+
+.sparky-title {
+  margin: 0 0 clamp(18px, 3vh, 32px);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 60px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.sparky-line {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.sparky-body {
+  margin: 0 auto;
+  max-width: 62ch;
+  font-size: clamp(14px, 1.15vw, 18px);
+  font-weight: 600;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  will-change: transform, opacity;
+}
+
+/* ---- Fallback (perangkat lemah / reduced-motion): langsung kondisi akhir,
+   tanpa pin, tanpa scrub. ---- */
+.sparky.is-static {
+  height: auto;
+}
+.sparky.is-static .sparky-stage {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  padding: clamp(40px, 8vh, 90px) 0 clamp(60px, 10vh, 120px);
+}
+.sparky.is-static .sparky-device {
+  position: relative;
+  left: auto;
+  top: auto;
+  margin: 0 auto;
+  transform: none;
+  width: min(70vw, 620px);
+}
+.sparky.is-static .sparky-copy {
+  position: relative;
+  left: auto;
+  top: auto;
+  margin: clamp(32px, 6vh, 64px) auto 0;
+  transform: none;
+}
+
+@media (max-width: 820px) {
+  .sparky {
+    height: 260vh;
+  }
+  .sparky-device {
+    width: 88vw;
+  }
+  .sparky-podium {
+    /* min(36vw) di mobile cuma ~140px — terlalu kecil dibanding device. */
+    width: 66vw;
+    top: 70%;
+  }
+  .sparky-tree {
+    width: 52vw;
+  }
+  .sparky-marquee {
+    font-size: 24vw;
+  }
+  /* Naik cukup jauh: di layar sempit judul jadi 3 baris, kalau tetap di 56%
+     paragrafnya terpotong section berikutnya. */
+  .sparky-copy {
+    top: 34%;
+    width: 92vw;
+  }
+  .sparky-frog {
+    width: 62vw;
+  }
+  .sparky-title {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+  .sparky-body {
+    font-size: clamp(13px, 3.4vw, 16px);
+  }
+}

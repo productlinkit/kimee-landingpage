@@ -1,0 +1,28 @@
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --primary: #5ec26a;
+  --primary-deep: #3f9e4f;
+  --accent: #ffb84d;
+  --accent-2: #ff7a59;
+
+  --ink: #0b1020;
+  --ink-soft: #1a2140;
+  --muted: #5b6381;
+  --paper: #fbf9f4;
+  --paper-2: #f2eee3;
+  --line: rgba(11, 16, 32, 0.08);
+
+  --radius: 18px;
+  --radius-lg: 28px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --container: 1240px;
+  --pad-x: clamp(20px, 5vw, 56px);
+
+  --font-display:
+    'Nunito', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-ui: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}

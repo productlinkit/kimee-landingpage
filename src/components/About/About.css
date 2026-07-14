@@ -1,0 +1,286 @@
+/* ============================================================
+   SECTION 1.7: WHAT IS KIMEE — accordion 3 kartu
+   ------------------------------------------------------------
+   Tepi atas bergelombang (#wavyTop, clipPath yang sama dipakai .clouds)
+   + margin-top negatif → langit section ini naik menutupi rumput .honest.
+
+   ANIMASI BUKA/TUTUP — hanya SATU properti yang dianimasikan: flex-grow
+   pada .about-card. Isi kartu tidak punya transisi sendiri:
+
+     .about-card-media : flex 0 1 var(--media-w)  → di kartu tertutup ia
+       menyusut mengikuti lebar kartu; di kartu aktif ia pas --media-w.
+     .about-card-panel : flex 1 1 0 → menyerap sisa ruang kartu aktif, dan
+       jadi 0 di kartu tertutup. Tidak perlu transisi.
+
+   Gambar di dalam media lebarnya DIKUNCI ke --media-w (bukan 100%). Ini
+   penting: aset-nya potret (896×1200), jadi kalau lebarnya ikut container,
+   object-fit: cover berpindah dari height-driven (kartu sempit) ke
+   width-driven (kartu lebar) dan gambarnya ikut ter-zoom ~31% saat kartu
+   membuka — itu yang terasa seperti "bounce". Dengan lebar terkunci,
+   skalanya tetap dan kartu hanya menyingkap gambar.
+   ============================================================ */
+.about {
+  --navy: #14315f;
+  --lime: #8fc63f;
+  --media-w: clamp(240px, 27vw, 390px);
+  --ease-card: cubic-bezier(0.65, 0, 0.35, 1);
+
+  position: relative;
+  z-index: 6; /* di atas .honest (5), di bawah .clouds (10) */
+  margin-top: -10vh;
+  padding: calc(10vh + clamp(56px, 8vh, 100px)) var(--pad-x)
+    clamp(90px, 14vh, 180px);
+  background: linear-gradient(180deg, #cfecff 0%, #daf1fd 28%, #daf1fd 100%);
+  clip-path: url(#wavyTop);
+  -webkit-clip-path: url(#wavyTop);
+}
+
+/* ---- Judul ---- */
+.about-head {
+  max-width: 900px;
+  margin: 0 auto clamp(36px, 6vh, 72px);
+  text-align: center;
+}
+
+.about-eyebrow {
+  margin: 0 0 16px;
+  font-size: clamp(11px, 0.9vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.about-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--navy);
+}
+.about-title span {
+  display: block;
+}
+
+/* ---- Deck ---- */
+.about-deck {
+  display: flex;
+  max-width: 1240px;
+  height: clamp(380px, 33vw, 540px);
+  margin: 0 auto;
+  border-radius: clamp(20px, 2vw, 30px);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(20, 49, 95, 0.14);
+}
+
+.about-card {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  background: #fff;
+  cursor: pointer;
+  outline-offset: -4px;
+  transition: flex-grow 0.6s var(--ease-card);
+}
+/* flex-grow 5 → kartu aktif ~71% lebar deck, dua sisanya ~14.5% (bilah). */
+.about-card.is-active {
+  flex-grow: 5;
+  cursor: default;
+}
+
+/* ---- Media ---- */
+.about-card-media {
+  position: relative;
+  flex: 0 1 var(--media-w);
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Gelap sedikit saat tertutup agar judul vertikal terbaca. */
+.about-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 20, 40, 0.28) 0%,
+    rgba(8, 20, 40, 0.6) 100%
+  );
+  opacity: 1;
+  transition: opacity 0.5s var(--ease-card);
+}
+.about-card.is-active .about-card-media::after {
+  opacity: 0;
+}
+
+/* Garis hijau kartu tertutup. Lapisan sendiri di ATAS overlay — kalau
+   dipasang sebagai box-shadow di .about-card-media, ::after menutupinya. */
+.about-card-media::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  box-shadow: inset 0 0 0 3px var(--lime);
+  opacity: 1;
+  transition: opacity 0.45s var(--ease-card);
+}
+.about-card.is-active .about-card-media::before {
+  opacity: 0;
+}
+
+/* Lebar dikunci (lihat catatan di kepala file) → tidak ada zoom saat buka. */
+.about-card-still,
+.about-card-motion {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--media-w);
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  display: block;
+}
+/* GIF hanya tampil saat kartu aktif; JPEG-nya tetap di bawahnya sebagai isi
+   sementara selama GIF masih diunduh. */
+.about-card-motion {
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-card);
+}
+.about-card.is-active .about-card-motion {
+  opacity: 1;
+}
+
+/* Judul vertikal di kartu tertutup. */
+.about-card-spine {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg); /* dibaca dari bawah ke atas */
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(17px, 1.6vw, 24px);
+  color: #fff;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.35s var(--ease-card);
+}
+.about-card.is-active .about-card-spine {
+  opacity: 0;
+}
+
+/* ---- Panel putih (isi kartu aktif) ---- */
+.about-card-panel {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease-card);
+}
+.about-card.is-active .about-card-panel {
+  opacity: 1;
+}
+
+/* Lebar tetap → teks tidak reflow selama kartu melebar; sisanya dipotong
+   .about-card-panel (overflow: hidden). */
+.about-card-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  flex: none;
+  width: clamp(280px, 34vw, 480px);
+  padding: 0 clamp(24px, 3vw, 54px);
+}
+
+.about-card-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(19px, 1.9vw, 28px);
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.about-card-body {
+  margin: 0;
+  font-size: clamp(13px, 1.05vw, 16px);
+  font-weight: 500;
+  line-height: 1.55;
+  color: #6b7280;
+}
+
+.about-cta {
+  margin-top: 8px;
+  padding: 13px 26px;
+  border-radius: 99px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(13px, 1vw, 15px);
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(94, 194, 106, 0.35);
+  transition:
+    background 0.25s var(--ease),
+    transform 0.25s var(--ease),
+    box-shadow 0.25s var(--ease);
+}
+.about-cta:hover {
+  background: var(--primary-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(94, 194, 106, 0.45);
+}
+
+/* ---- Mobile: accordion vertikal ---- */
+@media (max-width: 820px) {
+  .about-deck {
+    flex-direction: column;
+    height: auto;
+  }
+  .about-card {
+    flex: none;
+    flex-direction: column;
+    transition: none;
+  }
+  .about-card-media {
+    flex: none;
+    height: 86px;
+    transition: height 0.55s var(--ease-card);
+  }
+  .about-card.is-active .about-card-media {
+    height: 220px;
+  }
+  .about-card-still,
+  .about-card-motion {
+    width: 100%;
+  }
+  .about-card-spine {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 17px;
+  }
+  .about-card-panel {
+    flex: none;
+    max-height: 0;
+    transition:
+      max-height 0.55s var(--ease-card),
+      opacity 0.45s var(--ease-card);
+  }
+  .about-card.is-active .about-card-panel {
+    max-height: 400px;
+  }
+  .about-card-copy {
+    width: 100%;
+    padding: clamp(20px, 5vw, 32px);
+  }
+}
