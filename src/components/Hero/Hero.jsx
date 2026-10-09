@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from 'react';
-import { HERO_SCENES } from '../../config/content';
+import { useContent } from '../../config/content';
 import { USE_FALLBACK } from '../../lib/device';
 import { applyFallback } from '../../lib/fallback';
 import { useFrameScrubber } from '../../hooks/useFrameScrubber';
@@ -18,6 +19,8 @@ import './Hero.css';
  * @param {React.RefObject} cloudsRef  dipakai sebagai endTrigger pin
  */
 export default function Hero({ frames, enabled, cloudsRef }) {
+  const { t } = useTranslation();
+  const { HERO_SCENES } = useContent();
   const heroRef = useRef(null);
   const stageRef = useRef(null);
   const canvasRef = useRef(null);
@@ -81,7 +84,7 @@ export default function Hero({ frames, enabled, cloudsRef }) {
         <img
           className="hero-fallback"
           src="/hero/frame-001.jpg"
-          alt="Anak kecil memandang kepulauan mengambang bersama Sparky"
+          alt={t('hero.alt')}
         />
 
         {/* Overlay gelap — opacity-nya di-drive timeline, hanya saat ada teks */}

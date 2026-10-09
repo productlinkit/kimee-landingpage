@@ -1,0 +1,379 @@
+{
+  "meta": {
+    "title": "Kimee — A world of learning, a place to grow.",
+    "description": "A gamified learning platform for children aged 3–8, guided by a warm AI friend."
+  },
+  "common": {
+    "loadingTitle": "Loading your adventure…",
+    "loadingSub": "Kimee is preparing your world of learning",
+    "scrollTop": "Back to top",
+    "logoAlt": "Kimee",
+    "backHome": "Back to home",
+    "language": "Language",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "alt": "A little child looking at floating islands with Sparky",
+    "headline": [
+      "A world of learning,",
+      "<em>a place to grow.</em>"
+    ],
+    "body": [
+      "Five learning islands,",
+      "hundreds of games,",
+      "and a friend named <em>Kimee</em> &mdash;",
+      "ready to turn your child&rsquo;s curiosity",
+      "into an adventure."
+    ],
+    "tagline": [
+      "Kimee is designed to",
+      "<em>spark curiosity</em> every minute,",
+      "not just to <em>pass the time.</em>"
+    ],
+    "scrollHint": "Scroll to explore"
+  },
+  "stats": {
+    "aria": "Kimee in numbers",
+    "items": [
+      "Happy Learners",
+      "App Store Rating",
+      "Lessons Completed",
+      "Ad-Free Play"
+    ]
+  },
+  "honest": {
+    "eyebrow": "The Honest Truth",
+    "title": [
+      "Most learning apps keep kids",
+      "busy. Few actually teach them."
+    ],
+    "body": "Parents struggle to find digital experiences that are genuinely enriching. Most apps are either mind-numbing entertainment or rigorous, joyless testing. The result? Guilt-inducing screen time.",
+    "cardTitle": "The Kimee Resolution",
+    "cardBody": "We bridge the gap. Kimee transforms essential developmental skills into a magical world of exploration. It&rsquo;s screen time that parents trust and kids actually crave.",
+    "cardCta": "Start Learning Free",
+    "charAlt": "Kimee character welcoming you"
+  },
+  "about": {
+    "eyebrow": "What is Kimee?",
+    "title": [
+      "Five worlds. One growing child.",
+      "Infinite potential."
+    ],
+    "cards": [
+      {
+        "title": "Learning that feels like play",
+        "body": "Interactive quests and games disguised as fun, ensuring your child stays engaged while absorbing core concepts."
+      },
+      {
+        "title": "AI that knows your child",
+        "body": "Kimee adapts to every answer. Pacing, hints, and challenges shift to match how your child actually learns."
+      },
+      {
+        "title": "Clarity for parents",
+        "body": "A weekly snapshot of what your child explored, what clicked, and where they need a little help. No guesswork."
+      }
+    ]
+  },
+  "islands": {
+    "title": [
+      "Every island is",
+      "<em>a little world.</em>"
+    ],
+    "clouds": "Transition clouds",
+    "viewport": "Learning islands",
+    "items": [
+      {
+        "title": "Jungle Adventure",
+        "category": "Math & Logic"
+      },
+      {
+        "title": "Storybook Land",
+        "category": "Literacy & Language"
+      },
+      {
+        "title": "Artful Iceberg",
+        "category": "Creativity & Expression"
+      },
+      {
+        "title": "Empathy Bay",
+        "category": "Social Emotional"
+      },
+      {
+        "title": "Discovery Desert",
+        "category": "Life Skills & Discovery"
+      }
+    ]
+  },
+  "sparky": {
+    "marquee": "Meet Sparky",
+    "title": [
+      "Sparky answers the questions",
+      "a report card never could."
+    ],
+    "body": "Ask anything about your child&rsquo;s progress — strengths, gaps, what to practice next. Sparky reads every lesson they&rsquo;ve played and explains it in plain language, any time you ask.",
+    "alt": "Sparky — the AI assistant that answers parents' questions"
+  },
+  "how": {
+    "eyebrow": "How it works, daily",
+    "title": "10 minutes a day. Real progress in 30 days.",
+    "steps": [
+      {
+        "title": "AI builds plan",
+        "body": "A tailored weekly roadmap is generated based on current skill levels."
+      },
+      {
+        "title": "Child explores",
+        "body": "10-15 minutes of immersive, guided play across the learning islands."
+      },
+      {
+        "title": "Parent sees results",
+        "body": "Receive a simple, clear update on what was learned and achieved."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "What do they say?",
+    "title": [
+      "Parents who started free.",
+      "Parents who never looked back."
+    ],
+    "stars": "5 out of 5 stars",
+    "items": [
+      {
+        "quote": "My 5-year-old struggled to focus, but with Kimee she happily plays while learning to read. The reports are so detailed for parents!",
+        "name": "Rina M.",
+        "city": "Jakarta"
+      },
+      {
+        "quote": "I was unsure about subscribing, but after seeing the counting progress in Discovery Cove, it's well worth it compared to regular tutoring.",
+        "name": "Dimas A.",
+        "city": "Surabaya"
+      },
+      {
+        "quote": "Sparky AI really helps spot where my child struggles. The UI is safe and there are no ads at all. Such peace of mind.",
+        "name": "Sarah P.",
+        "city": "Bandung"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions parents ask",
+    "title": "Answers, before you have to ask.",
+    "items": [
+      {
+        "q": "Is Kimee suitable for preschoolers?",
+        "a": "Yes. Kimee is designed for children aged 3–8. Every mini-game starts at the most basic level and adapts to your child's ability, so preschoolers can play without needing to read first."
+      },
+      {
+        "q": "Are there ads in the app?",
+        "a": "None at all. No ads, no in-game purchases, and no links out of the app — including on the free plan."
+      },
+      {
+        "q": "How do I cancel my subscription?",
+        "a": "You can cancel anytime from your account settings, no need to contact us. Access stays active until the paid period ends, and your child's learning progress is never lost."
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Your child is ready to learn. Are",
+      "you ready to see them grow?"
+    ],
+    "body": "Join thousands of parents building better foundations today.",
+    "button": "Start Learning Free"
+  },
+  "footer": {
+    "tagline": "Where every child&rsquo;s potential finds its path.",
+    "copyright": "© 2026 Kimee AI EdTech.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "support": "Support"
+  },
+  "pricing": {
+    "eyebrow": "Simple, honest pricing",
+    "title": "Less than one tutoring session. Every single month.",
+    "loading": "Loading plans…",
+    "error": "We couldn't load the plans right now.",
+    "retry": "Try again",
+    "popular": "★ Popular",
+    "best": "★ Best Value",
+    "save": "Save {{percent}}%",
+    "free": {
+      "name": "Free",
+      "features": [
+        "1 Island access",
+        "Basic tracking",
+        "Ad-free forever"
+      ],
+      "cta": "Continue with Free Plan"
+    },
+    "ctaTrial": "Start {{days}}-Day Free Trial",
+    "ctaChoose": "Choose {{name}}",
+    "trialLine": "{{days}} days free",
+    "legal": "Secure payment by Stripe. Cancel anytime."
+  },
+  "pages": {
+    "privacy": {
+      "metaTitle": "Privacy Policy — Kimee"
+    },
+    "terms": {
+      "metaTitle": "Terms of Service — Kimee"
+    },
+    "support": {
+      "metaTitle": "Support — Kimee",
+      "title": "How can we help?",
+      "subtitle": "Most answers are a message away. We reply within 24 hours on business days.",
+      "emailTitle": "Email us",
+      "emailBody": "Questions about your account, billing, or your child's profile.",
+      "emailCta": "Send an email",
+      "billingTitle": "Billing & subscription",
+      "billingBody": "Manage or cancel your plan any time in the app under Settings → Subscription. Access stays active until the paid period ends.",
+      "privacyTitle": "Privacy & your child's data",
+      "privacyBody": "Export or delete your child's data from Settings → Data Privacy in the app. Deletions are processed within 30 days.",
+      "faqTitle": "Quick answers",
+      "faqCta": "See all FAQs",
+      "hours": "Support hours: Monday–Friday, 09:00–17:00 (WIB)"
+    }
+  },
+  "legalPage": {
+    "lastUpdated": "Last Updated: June 5, 2026"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "s1": {
+      "title": "Introduction",
+      "body": "Kimee is committed to protecting the privacy of children and families. This policy explains how we collect, use, and protect information from our educational platform. We comply with COPPA and GDPR child data protection standards."
+    },
+    "s2": {
+      "title": "Information We Collect",
+      "parentsLabel": "From Parents:",
+      "parents": "Name, email, password (encrypted), payment details (Bank Transfer, Credit Card, E-wallet, QRIS)",
+      "childrenLabel": "From Children (with parental consent):",
+      "children": "First name, age, avatar, learning interests, progress scores, activity history, Sparky AI chat interactions",
+      "technicalLabel": "Technical Data:",
+      "technical": "Device type, browser, session duration (for platform functionality)"
+    },
+    "s3": {
+      "title": "How We Use Information",
+      "personalizationLabel": "Personalization:",
+      "personalization": "Create Daily Path learning activities and 7-Day Roadmap based on child's age and interests",
+      "progressLabel": "Progress Tracking:",
+      "progress": "Monitor achievements across Island Map areas (Math & Logic, Literacy, Creativity, SEL, Life Skills)",
+      "aiLabel": "AI Features:",
+      "ai": "Power Sparky assistant recommendations and learning analytics",
+      "accountLabel": "Account Management:",
+      "account": "Process subscriptions, manage multiple child profiles (Premium plans)",
+      "securityLabel": "Security:",
+      "security": "Parent PIN protection, secure authentication"
+    },
+    "s4": {
+      "title": "Information Sharing",
+      "warning": "We NEVER sell or rent your child's information.",
+      "body": "Limited sharing only with: Payment processors (secure transactions), hosting providers (data storage), legal requirements (when required by law)"
+    },
+    "s5": {
+      "title": "Data Security",
+      "body": "All data encrypted (AES-256), secure authentication, regular security audits, 24/7 monitoring"
+    },
+    "s6": {
+      "title": "Your Rights",
+      "parentsLabel": "Parents can:",
+      "parents": "View all child data, download data (JSON format), request deletion (processed within 30 days), modify information, withdraw consent anytime",
+      "accessLabel": "Access through:",
+      "access": "Settings → Data Privacy or contact privacy@Kidemy.com"
+    },
+    "s7": {
+      "title": "Data Retention",
+      "body": "Active accounts: Data retained while active • Deleted accounts: Permanently deleted within 30 days • Backups: Removed within 90 days"
+    },
+    "s8": {
+      "title": "Children's Privacy (Ages 3-12)",
+      "body": "Age gate verification required • Parental consent before any data collection • No public forums or social features • Parent can review and delete child data anytime • No collection beyond what's necessary for learning"
+    },
+    "s9": {
+      "title": "Updates",
+      "body": "Policy changes communicated via email with updated date. Continued use after changes means acceptance."
+    },
+    "s10": {
+      "title": "Contact",
+      "email": "Email: privacy@Kidemy.com",
+      "response": "Response within 24 hours"
+    },
+    "coppa": "COPPA Compliant",
+    "gdpr": "GDPR Compliant"
+  },
+  "termsConditions": {
+    "title": "Terms & Conditions",
+    "s1": {
+      "title": "Agreement",
+      "body": "By creating an account, you agree to these Terms. Must be 18+ and a parent/guardian. Kimee is for children ages 3-12. These Terms are legally binding."
+    },
+    "s2": {
+      "title": "Your Account",
+      "respLabel": "Your responsibilities:",
+      "resp": "Provide accurate information • Keep password and PIN secure • Notify us of unauthorized access • Don't share credentials outside household • Supervise your child's use"
+    },
+    "s3": {
+      "title": "What Kimee Provides",
+      "list": "• Island Map Learning: 5 educational areas (Jungle Adventure for Math & Logic, Storybook Land for Literacy, Artful Archipelago for Creativity, Empathy Bay for SEL, Discovery Cove for Life Skills)\n• Personalized Features: Daily Path learning activities, 7-Day Roadmap, Sparky AI assistant\n• Progress Tracking: Achievement scores, learning analytics, detailed reports\n• Parent Tools: Settings dashboard, multiple child profiles (Premium), PIN protection",
+      "note": "We may modify features anytime. Service provided \"as is\" without guarantees of specific learning outcomes."
+    },
+    "s4": {
+      "title": "Information Sharing",
+      "warning": "We NEVER sell or rent your child's information.",
+      "body": "Limited sharing only with: Payment processors (secure transactions), hosting providers (data storage), legal requirements (when required by law)"
+    },
+    "s5": {
+      "title": "Subscription Plans",
+      "freeLabel": "Free Plan:",
+      "free": "1 child profile, basic Island Map access",
+      "premiumLabel": "Premium Plans:",
+      "premium": "• Monthly (Rp 49,000)\n• Semi-Annual (Rp 252,000 / Save 14%)\n• Annual (Rp 420,000 / Save 29%)",
+      "includes": "Premium includes: Multiple children, Daily Path, advanced activities, full progress reports",
+      "payment": "Payment: Bank Transfer, Credit Card, E-wallet, QRIS • Auto-renewal unless canceled • Cancel via Settings → Subscription → Manage Plan • Access continues until period ends • No refunds for partial periods • 7-day free trial for new Premium users"
+    },
+    "s6": {
+      "title": "Acceptable Use",
+      "dontLabel": "DO NOT:",
+      "dont": "Share account outside household • Bypass security • Reverse engineer • Use bots or scrapers • Upload malicious content • Provide false information • Use for commercial purposes"
+    },
+    "s7": {
+      "title": "Ownership",
+      "contentLabel": "Kimee Content:",
+      "content": "All games, Island Map, Sparky character, graphics, and software owned by Kimee (copyright protected) • You get personal, non-commercial use license only",
+      "dataLabel": "Your Data:",
+      "data": "Profile and progress data remains yours • We use it only as described in Privacy Policy"
+    },
+    "s8": {
+      "title": "Privacy",
+      "intro": "See our Privacy Policy for full details.",
+      "keyLabel": "Key points:",
+      "key": "We never sell child data • Parental consent required • Access child data via Settings → Data Privacy • Delete data anytime (30-day processing) • COPPA & GDPR compliant"
+    },
+    "s9": {
+      "title": "Disclaimers",
+      "body": "Service provided \"AS IS\" without guarantees • No warranty of uninterrupted service • No guarantee of specific learning outcomes • We strive for quality but content may have errors"
+    },
+    "s10": {
+      "title": "Liability Limits",
+      "body": "Kimee not liable for: Indirect damages, data loss, service interruptions, unauthorized account access • Maximum liability limited to amount paid in past 12 months"
+    },
+    "s11": {
+      "title": "Account Termination",
+      "youLabel": "You can:",
+      "you": "Delete account anytime via Settings → Security → Delete Account (data deleted in 30 days)",
+      "weLabel": "We can:",
+      "we": "Suspend/terminate for Terms violations, fraud, abuse, or non-payment (notice when possible)"
+    },
+    "s12": {
+      "title": "Changes & Updates",
+      "body": "We may update Terms anytime • Changes notified via email • Continued use = acceptance • If you disagree, delete account"
+    },
+    "s13": {
+      "title": "Contact",
+      "legalTeam": "Kimee Legal Team",
+      "email": "Email: legal@kidemy.com"
+    },
+    "footer": "By creating an account, you agree to these Terms and our Privacy Policy."
+  }
+}

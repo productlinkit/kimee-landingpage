@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
-import { HERO_STATS } from '../../config/content';
+import { useContent } from '../../config/content';
 import { useStatsTimeline } from './useStatsTimeline';
 import './Stats.css';
 
@@ -22,6 +23,8 @@ import './Stats.css';
  * supaya dua transform itu tidak saling menimpa.
  */
 export default function Stats({ enabled }) {
+  const { t } = useTranslation();
+  const { HERO_STATS } = useContent();
   const sectionRef = useRef(null);
 
   useStatsTimeline(sectionRef, HERO_STATS, enabled);
@@ -31,7 +34,7 @@ export default function Stats({ enabled }) {
       className="metrics"
       id="metrics"
       ref={sectionRef}
-      aria-label="Kimee dalam angka">
+      aria-label={t('stats.aria')}>
       <div className="metrics-band">
         <svg
           className="metrics-shape"

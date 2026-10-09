@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
-import { HONEST } from '../../config/content';
+import { useContent } from '../../config/content';
 import Reveal from '../common/Reveal';
 import { useHonestChar } from './useHonestChar';
 import './Honest.css';
@@ -13,6 +14,8 @@ import './Honest.css';
  * Semua aset dari /public/honest.
  */
 export default function Honest({ enabled }) {
+  const { t } = useTranslation();
+  const { HONEST } = useContent();
   const charRef = useRef(null);
   const cardRef = useRef(null);
 
@@ -46,7 +49,7 @@ export default function Honest({ enabled }) {
         />
 
         <div className="honest-char" ref={charRef}>
-          <img src="/koala-char.webp" alt="Karakter Kimee menyambut" />
+          <img src="/koala-char.webp" alt={t('honest.charAlt')} />
         </div>
 
         {/* ref di anak, bukan di <Reveal> — Reveal tidak meneruskan ref. */}

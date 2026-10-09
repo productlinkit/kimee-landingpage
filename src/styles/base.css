@@ -215,3 +215,37 @@ button {
     position: absolute;
   }
 }
+
+/* ============================================================
+   RTL (Arabic)
+   Nunito/Playfair have no Arabic glyphs; fall back to Noto Sans Arabic.
+   The scroll-driven stages are positioned and translated by GSAP in LTR
+   coordinates, so they keep `direction: ltr` and only their text flips.
+   ============================================================ */
+[dir='rtl'] body {
+  font-family: 'Noto Sans Arabic', var(--font-ui);
+}
+[dir='rtl'] .display,
+[dir='rtl'] h1,
+[dir='rtl'] h2,
+[dir='rtl'] h3 {
+  font-family: 'Noto Sans Arabic', var(--font-display);
+  font-style: normal;
+}
+[dir='rtl'] em {
+  font-style: normal;
+}
+[dir='rtl'] .hero,
+[dir='rtl'] .clouds,
+[dir='rtl'] .islands-track,
+[dir='rtl'] .metrics-band {
+  direction: ltr;
+}
+[dir='rtl'] .hero *,
+[dir='rtl'] .clouds-content *,
+[dir='rtl'] .metrics-band * {
+  direction: rtl;
+}
+[dir='rtl'] .metrics-value {
+  direction: ltr;
+}

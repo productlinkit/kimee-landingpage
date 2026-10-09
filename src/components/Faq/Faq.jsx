@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FAQ } from '../../config/content';
+import { useContent } from '../../config/content';
 import Reveal from '../common/Reveal';
 import './Faq.css';
 
@@ -9,6 +9,7 @@ import './Faq.css';
  * semuanya tertutup (seperti mockup).
  */
 export default function Faq({ enabled }) {
+  const { FAQ } = useContent();
   const [open, setOpen] = useState(null);
 
   return (

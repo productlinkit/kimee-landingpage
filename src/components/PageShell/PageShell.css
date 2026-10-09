@@ -1,0 +1,67 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.shell-skip {
+  position: absolute;
+  inset-inline-start: 12px;
+  top: -60px;
+  z-index: 50;
+  padding: 10px 16px;
+  border-radius: 99px;
+  background: #1b2f66;
+  color: #fff;
+  font-weight: 700;
+}
+.shell-skip:focus {
+  top: 12px;
+}
+.shell-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px var(--pad-x);
+  border-bottom: 1px solid #e6ebf5;
+}
+.shell-logo img {
+  height: 44px;
+  width: auto;
+}
+.shell-tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.shell-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b2f66;
+}
+.shell-back-arrow {
+  display: inline-block;
+}
+[dir='rtl'] .shell-back-arrow {
+  transform: scaleX(-1);
+}
+.shell-lang select {
+  background: #1b2f66;
+}
+.shell-lang select:hover {
+  background: #24386f;
+}
+.shell-main {
+  flex: 1;
+  padding: clamp(28px, 6vh, 64px) var(--pad-x) clamp(60px, 10vh, 110px);
+}
+@media (max-width: 520px) {
+  .shell-back {
+    display: none;
+  }
+}

@@ -1,7 +1,20 @@
-import { FOOTER } from "../../config/content";
-import "./Footer.css";
+import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useContent } from '../../config/content';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import './Footer.css';
 
 export default function Footer() {
+  const { FOOTER } = useContent();
+  const { t } = useTranslation();
+  const { locale } = useParams();
+
+  const links = [
+    { label: t('footer.privacy'), to: `/${locale}/privacy-policy` },
+    { label: t('footer.terms'), to: `/${locale}/terms-of-service` },
+    { label: t('footer.support'), to: `/${locale}/support` },
+  ];
+
   return (
     <footer className="foot">
       {/* Gelombang hijau di tepi atas footer (dekorasi). */}
@@ -19,7 +32,7 @@ export default function Footer() {
       <div className="foot-inner">
         <div className="foot-top">
           {/* Logo aslinya biru → diputihkan lewat filter, bukan aset baru. */}
-          <img className="foot-logo" src="/logo-kimee.png" alt="Kimee" />
+          <img className="foot-logo" src="/logo-kimee.png" alt={t('common.logoAlt')} />
           <p className="foot-tagline">{FOOTER.tagline}</p>
         </div>
 
@@ -29,14 +42,12 @@ export default function Footer() {
           <p className="foot-copy">{FOOTER.copyright}</p>
 
           <nav className="foot-nav">
-            {FOOTER.links.map((link) => (
-              <a key={link.label} href={link.href}>
+            {links.map((link) => (
+              <Link key={link.to} to={link.to}>
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <button type="button" className="foot-lang">
-              {FOOTER.lang}
-            </button>
+            <LanguageSwitcher />
           </nav>
         </div>
       </div>

@@ -61,3 +61,17 @@ membuat lalu membuang pin spacer dua kali dan menggeser posisi trigger.
 
 **Tinggi `.clouds` dihitung JS** = viewport + jarak horizontal scroll, lalu
 `ScrollTrigger.refresh()` supaya pin hero ikut menyesuaikan.
+
+## Pricing, checkout handoff & i18n
+
+- **Env** (`.env.example` → `.env`): `VITE_API_BASE_URL` (Kimee BE, `/api/v1`), `VITE_APP_URL`
+  (the web app, `fe/`), `VITE_SUPPORT_EMAIL`. The BE must list this site's origin in `CORS_ORIGINS`.
+- **Pricing** reads `GET /subscription/plans?locale=<l>` — names, prices, currency and trial days are DB-driven.
+- **Plan buttons** → `<APP_URL>/<locale>/checkout?plan=<code>&currency=<c>`. The app registers the buyer, opens
+  Stripe, then (`from=landing`) goes parent setup → child setup → profile-created, which shows only
+  **Generate 7 Days Plan**. **Continue with Free Plan** → `<APP_URL>/<locale>/onboarding/parent-setup`, the normal
+  onboarding with the Start Free Trial / Continue Free buttons and no generate button.
+- **Routes** are locale-prefixed: `/en`, `/id`, `/ar` plus `/<l>/privacy-policy`, `/<l>/terms-of-service`, `/<l>/support`.
+  The host needs an SPA fallback to `index.html`.
+- **i18n**: copy lives in `src/i18n/locales/{en,id,ar}.json`; `ar` is RTL (`<html dir>` is set by the locale layout).
+  Policy text mirrors the web app's. `<em>` in a string marks the italic highlight (`src/lib/rich.jsx`).

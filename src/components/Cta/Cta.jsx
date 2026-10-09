@@ -1,4 +1,4 @@
-import { CTA } from '../../config/content';
+import { useContent } from '../../config/content';
 import Reveal from '../common/Reveal';
 import './Cta.css';
 
@@ -9,6 +9,7 @@ import './Cta.css';
  * dari kartunya).
  */
 export default function Cta({ enabled }) {
+  const { CTA } = useContent();
   return (
     <section className="cta" id="cta">
       <Reveal className="cta-card" enabled={enabled}>

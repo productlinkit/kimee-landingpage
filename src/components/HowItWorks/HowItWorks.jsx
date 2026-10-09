@@ -1,4 +1,4 @@
-import { HOW_IT_WORKS } from '../../config/content';
+import { useContent } from '../../config/content';
 import Reveal from '../common/Reveal';
 import './HowItWorks.css';
 
@@ -9,6 +9,7 @@ import './HowItWorks.css';
  * ikut memperbarui useSparkyTimeline.
  */
 export default function HowItWorks({ enabled }) {
+  const { HOW_IT_WORKS } = useContent();
   return (
     <section className="how" id="how">
       <div className="how-head">

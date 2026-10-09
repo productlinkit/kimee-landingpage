@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { scrollToTop } from '../../lib/scroll';
 import './ScrollTop.css';
@@ -10,6 +11,7 @@ import './ScrollTop.css';
  * supaya tidak berkelahi dengan smooth-scroll yang sedang berjalan.
  */
 export default function ScrollTop() {
+  const { t } = useTranslation();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -25,7 +27,7 @@ export default function ScrollTop() {
       type="button"
       className={`scroll-top${visible ? ' is-visible' : ''}`}
       onClick={scrollToTop}
-      aria-label="Kembali ke atas"
+      aria-label={t('common.scrollTop')}
       tabIndex={visible ? 0 : -1}>
       <span className="material-symbols-rounded" aria-hidden="true">
         arrow_upward

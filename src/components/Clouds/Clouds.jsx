@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
-import { ISLANDS, ISLANDS_TITLE } from '../../config/content';
+import { useContent } from '../../config/content';
 import IslandCard from './IslandCard';
 import { useCloudsTimeline } from './useCloudsTimeline';
 import './Clouds.css';
@@ -13,6 +14,8 @@ import './Clouds.css';
  *        endTrigger pin. Karena itu ref-nya diteruskan dari luar.
  */
 export default function Clouds({ sectionRef, enabled }) {
+  const { t } = useTranslation();
+  const { ISLANDS, ISLANDS_TITLE } = useContent();
   const stageRef = useRef(null);
   const titleRef = useRef(null);
   const trackRef = useRef(null);
@@ -28,7 +31,7 @@ export default function Clouds({ sectionRef, enabled }) {
       className="clouds"
       id="clouds"
       ref={sectionRef}
-      aria-label="Awan transisi">
+      aria-label={t('islands.clouds')}>
       <div className="clouds-stage" ref={stageRef}>
         {/* Wave layer belakang (terang) */}
         <svg
@@ -54,7 +57,7 @@ export default function Clouds({ sectionRef, enabled }) {
           <div
             className="islands-viewport"
             ref={viewportRef}
-            aria-label="Pulau pembelajaran">
+            aria-label={t('islands.viewport')}>
             <div className="islands-track" ref={trackRef}>
               {ISLANDS.map((island) => (
                 <IslandCard key={island.id} {...island} />

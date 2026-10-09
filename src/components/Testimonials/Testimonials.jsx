@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
-import { TESTIMONIALS } from '../../config/content';
+import { useContent } from '../../config/content';
 import Reveal from '../common/Reveal';
 import { useTestimonialsTimeline } from './useTestimonialsTimeline';
 import './Testimonials.css';
@@ -10,6 +11,8 @@ import './Testimonials.css';
  * scroll, berhenti tepat saat kartu TERAKHIR berada di tengah viewport.
  */
 export default function Testimonials({ enabled }) {
+  const { t } = useTranslation();
+  const { TESTIMONIALS } = useContent();
   const sectionRef = useRef(null);
   const stageRef = useRef(null);
   const trackRef = useRef(null);
@@ -35,7 +38,7 @@ export default function Testimonials({ enabled }) {
             <ul className="tm-track" ref={trackRef}>
               {TESTIMONIALS.items.map((item) => (
                 <li className="tm-card" key={item.id}>
-                  <p className="tm-stars" aria-label="5 dari 5 bintang">
+                  <p className="tm-stars" aria-label={t('testimonials.stars')}>
                     ★★★★★
                   </p>
 

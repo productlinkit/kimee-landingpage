@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ABOUT } from '../../config/content';
+import { useContent } from '../../config/content';
 import Reveal from '../common/Reveal';
 import './About.css';
 
@@ -17,6 +17,7 @@ import './About.css';
  * itu HTML tidak valid). Keyboard tetap kebagian lewat tabIndex + onFocus.
  */
 export default function About({ enabled }) {
+  const { ABOUT } = useContent();
   const [active, setActive] = useState(0);
   const [loaded, setLoaded] = useState(() => new Set([0]));
 

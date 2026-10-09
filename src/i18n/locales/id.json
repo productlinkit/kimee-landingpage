@@ -1,0 +1,379 @@
+{
+  "meta": {
+    "title": "Kimee — Dunia belajar, tempat tumbuh.",
+    "description": "Platform edukasi bergamifikasi untuk anak usia 3–8 tahun, ditemani AI yang hangat."
+  },
+  "common": {
+    "loadingTitle": "Memuat petualanganmu…",
+    "loadingSub": "Kimee sedang menyiapkan dunia belajarmu",
+    "scrollTop": "Kembali ke atas",
+    "logoAlt": "Kimee",
+    "backHome": "Kembali ke beranda",
+    "language": "Bahasa",
+    "skipToContent": "Langsung ke konten"
+  },
+  "hero": {
+    "alt": "Anak kecil memandang kepulauan mengambang bersama Sparky",
+    "headline": [
+      "Dunia belajar,",
+      "<em>tempat tumbuh.</em>"
+    ],
+    "body": [
+      "Lima pulau belajar,",
+      "ratusan permainan,",
+      "dan seorang teman bernama <em>Kimee</em> &mdash;",
+      "siap mengubah rasa ingin tahu anakmu",
+      "menjadi petualangan."
+    ],
+    "tagline": [
+      "Kimee dirancang untuk",
+      "<em>memantik rasa ingin tahu</em> setiap menit,",
+      "bukan sekadar <em>mengisi waktu.</em>"
+    ],
+    "scrollHint": "Gulir untuk menjelajah"
+  },
+  "stats": {
+    "aria": "Kimee dalam angka",
+    "items": [
+      "Anak Belajar Bahagia",
+      "Rating App Store",
+      "Pelajaran Selesai",
+      "Main Tanpa Iklan"
+    ]
+  },
+  "honest": {
+    "eyebrow": "Kenyataannya",
+    "title": [
+      "Kebanyakan aplikasi belajar hanya menyibukkan",
+      "anak. Sedikit yang benar-benar mengajar."
+    ],
+    "body": "Orang tua kesulitan menemukan pengalaman digital yang benar-benar bermanfaat. Kebanyakan aplikasi hanya hiburan yang melenakan, atau tes yang kaku dan tak menyenangkan. Akibatnya? Waktu layar yang bikin merasa bersalah.",
+    "cardTitle": "Jawaban dari Kimee",
+    "cardBody": "Kami menjembatani kesenjangan itu. Kimee mengubah keterampilan tumbuh kembang yang penting menjadi dunia eksplorasi yang ajaib. Waktu layar yang dipercaya orang tua dan benar-benar dinanti anak.",
+    "cardCta": "Mulai Belajar Gratis",
+    "charAlt": "Karakter Kimee menyambut"
+  },
+  "about": {
+    "eyebrow": "Apa itu Kimee?",
+    "title": [
+      "Lima dunia. Satu anak yang bertumbuh.",
+      "Potensi tanpa batas."
+    ],
+    "cards": [
+      {
+        "title": "Belajar yang terasa seperti bermain",
+        "body": "Misi dan permainan interaktif yang dikemas menyenangkan, sehingga anak tetap asyik sambil menyerap konsep inti."
+      },
+      {
+        "title": "AI yang mengenal anakmu",
+        "body": "Kimee menyesuaikan diri di setiap jawaban. Tempo, petunjuk, dan tantangan bergeser mengikuti cara belajar anakmu."
+      },
+      {
+        "title": "Kejelasan untuk orang tua",
+        "body": "Ringkasan mingguan tentang apa yang dijelajahi anakmu, apa yang sudah paham, dan di mana ia perlu sedikit bantuan. Tanpa menebak-nebak."
+      }
+    ]
+  },
+  "islands": {
+    "title": [
+      "Setiap pulau adalah",
+      "<em>dunia kecil.</em>"
+    ],
+    "clouds": "Awan transisi",
+    "viewport": "Pulau pembelajaran",
+    "items": [
+      {
+        "title": "Petualangan Rimba",
+        "category": "Matematika & Logika"
+      },
+      {
+        "title": "Negeri Dongeng",
+        "category": "Literasi & Bahasa"
+      },
+      {
+        "title": "Gunung Es Seni",
+        "category": "Kreativitas & Ekspresi"
+      },
+      {
+        "title": "Teluk Empati",
+        "category": "Sosial Emosional"
+      },
+      {
+        "title": "Gurun Penemuan",
+        "category": "Keterampilan Hidup & Penemuan"
+      }
+    ]
+  },
+  "sparky": {
+    "marquee": "Kenalan dengan Sparky",
+    "title": [
+      "Sparky menjawab pertanyaan",
+      "yang tak pernah dijawab rapor."
+    ],
+    "body": "Tanyakan apa saja soal perkembangan anakmu — kekuatan, kekurangan, apa yang perlu dilatih berikutnya. Sparky membaca setiap pelajaran yang telah dimainkan dan menjelaskannya dengan bahasa sederhana, kapan pun kamu bertanya.",
+    "alt": "Sparky — asisten AI yang menjawab pertanyaan orang tua"
+  },
+  "how": {
+    "eyebrow": "Cara kerjanya, setiap hari",
+    "title": "10 menit sehari. Kemajuan nyata dalam 30 hari.",
+    "steps": [
+      {
+        "title": "AI menyusun rencana",
+        "body": "Peta jalan mingguan yang disesuaikan dibuat berdasarkan tingkat kemampuan saat ini."
+      },
+      {
+        "title": "Anak menjelajah",
+        "body": "10–15 menit bermain terpandu yang imersif di seluruh pulau belajar."
+      },
+      {
+        "title": "Orang tua melihat hasil",
+        "body": "Terima pembaruan sederhana dan jelas tentang apa yang dipelajari dan dicapai."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Kata mereka?",
+    "title": [
+      "Orang tua yang memulai gratis.",
+      "Orang tua yang tak pernah menoleh lagi."
+    ],
+    "stars": "5 dari 5 bintang",
+    "items": [
+      {
+        "quote": "Anak saya (5 thn) susah fokus belajar, tapi di Kimee dia betah main sambil belajar baca. Laporannya detail banget buat orang tua!",
+        "name": "Rina M.",
+        "city": "Jakarta"
+      },
+      {
+        "quote": "Awalnya ragu buat subscribe, tapi setelah lihat progress ngitungnya di Discovery Cove, worth it banget dibanding les biasa.",
+        "name": "Dimas A.",
+        "city": "Surabaya"
+      },
+      {
+        "quote": "Sparky AI ngebantu banget nebak kesulitan belajar anak. UI-nya aman, gak ada iklan sama sekali. Tenang rasanya.",
+        "name": "Sarah P.",
+        "city": "Bandung"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Pertanyaan orang tua",
+    "title": "Jawaban, sebelum kamu sempat bertanya.",
+    "items": [
+      {
+        "q": "Apakah Kimee cocok untuk anak prasekolah?",
+        "a": "Cocok. Kimee dirancang untuk anak usia 3–8 tahun. Setiap mini-game dimulai dari level paling dasar dan menyesuaikan sendiri dengan kemampuan anak, jadi anak prasekolah tetap bisa bermain tanpa perlu bisa membaca lebih dulu."
+      },
+      {
+        "q": "Apakah ada iklan di dalam aplikasi?",
+        "a": "Tidak ada, sama sekali. Tidak ada iklan, tidak ada pembelian di dalam game, dan tidak ada tautan keluar aplikasi — termasuk di paket gratis."
+      },
+      {
+        "q": "Bagaimana cara berhenti berlangganan?",
+        "a": "Bisa dibatalkan kapan saja lewat pengaturan akun, tanpa perlu menghubungi kami. Akses tetap aktif sampai periode yang sudah dibayar berakhir, dan progres belajar anak tidak hilang."
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Anakmu siap belajar. Apakah",
+      "kamu siap melihatnya tumbuh?"
+    ],
+    "body": "Bergabung dengan ribuan orang tua yang membangun fondasi lebih baik hari ini.",
+    "button": "Mulai Belajar Gratis"
+  },
+  "footer": {
+    "tagline": "Tempat potensi setiap anak menemukan jalannya.",
+    "copyright": "© 2026 Kimee AI EdTech.",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan",
+    "support": "Bantuan"
+  },
+  "pricing": {
+    "eyebrow": "Harga sederhana dan jujur",
+    "title": "Lebih murah dari satu sesi les. Setiap bulan.",
+    "loading": "Memuat paket…",
+    "error": "Paket belum bisa dimuat saat ini.",
+    "retry": "Coba lagi",
+    "popular": "★ Populer",
+    "best": "★ Paling Hemat",
+    "save": "Hemat {{percent}}%",
+    "free": {
+      "name": "Gratis",
+      "features": [
+        "Akses 1 Pulau",
+        "Pelacakan dasar",
+        "Bebas iklan selamanya"
+      ],
+      "cta": "Lanjut dengan Paket Gratis"
+    },
+    "ctaTrial": "Mulai Uji Coba Gratis {{days}} Hari",
+    "ctaChoose": "Pilih {{name}}",
+    "trialLine": "Gratis {{days}} hari",
+    "legal": "Pembayaran aman oleh Stripe. Batalkan kapan saja."
+  },
+  "pages": {
+    "privacy": {
+      "metaTitle": "Kebijakan Privasi — Kimee"
+    },
+    "terms": {
+      "metaTitle": "Syarat & Ketentuan — Kimee"
+    },
+    "support": {
+      "metaTitle": "Bantuan — Kimee",
+      "title": "Ada yang bisa kami bantu?",
+      "subtitle": "Sebagian besar jawaban hanya sejauh satu pesan. Kami membalas dalam 24 jam pada hari kerja.",
+      "emailTitle": "Kirim email",
+      "emailBody": "Pertanyaan tentang akun, tagihan, atau profil anakmu.",
+      "emailCta": "Kirim email",
+      "billingTitle": "Tagihan & langganan",
+      "billingBody": "Kelola atau batalkan paketmu kapan saja di aplikasi lewat Pengaturan → Langganan. Akses tetap aktif sampai periode yang dibayar berakhir.",
+      "privacyTitle": "Privasi & data anakmu",
+      "privacyBody": "Ekspor atau hapus data anakmu lewat Pengaturan → Privasi Data di aplikasi. Penghapusan diproses dalam 30 hari.",
+      "faqTitle": "Jawaban singkat",
+      "faqCta": "Lihat semua FAQ",
+      "hours": "Jam bantuan: Senin–Jumat, 09.00–17.00 WIB"
+    }
+  },
+  "legalPage": {
+    "lastUpdated": "Terakhir diperbarui: 5 Juni 2026"
+  },
+  "privacyPolicy": {
+    "title": "Kebijakan Privasi",
+    "s1": {
+      "title": "Pendahuluan",
+      "body": "Kimee berkomitmen melindungi privasi anak-anak dan keluarga. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi dari platform edukasi kami. Kami mematuhi standar perlindungan data anak COPPA dan GDPR."
+    },
+    "s2": {
+      "title": "Informasi yang Kami Kumpulkan",
+      "parentsLabel": "Dari Orang Tua:",
+      "parents": "Nama, email, kata sandi (terenkripsi), detail pembayaran (Transfer Bank, Kartu Kredit, E-wallet, QRIS)",
+      "childrenLabel": "Dari Anak (dengan persetujuan orang tua):",
+      "children": "Nama depan, usia, avatar, minat belajar, skor kemajuan, riwayat aktivitas, interaksi obrolan Sparky AI",
+      "technicalLabel": "Data Teknis:",
+      "technical": "Jenis perangkat, peramban, durasi sesi (untuk fungsi platform)"
+    },
+    "s3": {
+      "title": "Bagaimana Kami Menggunakan Informasi",
+      "personalizationLabel": "Personalisasi:",
+      "personalization": "Membuat aktivitas belajar Daily Path dan Peta Jalan 7 Hari berdasarkan usia dan minat anak",
+      "progressLabel": "Pelacakan Kemajuan:",
+      "progress": "Memantau pencapaian di seluruh area Island Map (Matematika & Logika, Literasi, Kreativitas, SEL, Kecakapan Hidup)",
+      "aiLabel": "Fitur AI:",
+      "ai": "Mendukung rekomendasi asisten Sparky dan analitik pembelajaran",
+      "accountLabel": "Manajemen Akun:",
+      "account": "Memproses langganan, mengelola beberapa profil anak (paket Premium)",
+      "securityLabel": "Keamanan:",
+      "security": "Perlindungan PIN orang tua, autentikasi aman"
+    },
+    "s4": {
+      "title": "Berbagi Informasi",
+      "warning": "Kami TIDAK PERNAH menjual atau menyewakan informasi anak Anda.",
+      "body": "Berbagi terbatas hanya dengan: pemroses pembayaran (transaksi aman), penyedia hosting (penyimpanan data), persyaratan hukum (jika diwajibkan oleh hukum)"
+    },
+    "s5": {
+      "title": "Keamanan Data",
+      "body": "Semua data terenkripsi (AES-256), autentikasi aman, audit keamanan berkala, pemantauan 24/7"
+    },
+    "s6": {
+      "title": "Hak Anda",
+      "parentsLabel": "Orang tua dapat:",
+      "parents": "Melihat semua data anak, mengunduh data (format JSON), meminta penghapusan (diproses dalam 30 hari), mengubah informasi, menarik persetujuan kapan saja",
+      "accessLabel": "Akses melalui:",
+      "access": "Pengaturan → Privasi Data atau hubungi privacy@Kidemy.com"
+    },
+    "s7": {
+      "title": "Retensi Data",
+      "body": "Akun aktif: Data disimpan selama aktif • Akun dihapus: Dihapus permanen dalam 30 hari • Cadangan: Dihapus dalam 90 hari"
+    },
+    "s8": {
+      "title": "Privasi Anak (Usia 3-12)",
+      "body": "Verifikasi gerbang usia diperlukan • Persetujuan orang tua sebelum pengumpulan data apa pun • Tidak ada forum publik atau fitur sosial • Orang tua dapat meninjau dan menghapus data anak kapan saja • Tidak ada pengumpulan di luar yang diperlukan untuk belajar"
+    },
+    "s9": {
+      "title": "Pembaruan",
+      "body": "Perubahan kebijakan dikomunikasikan melalui email dengan tanggal pembaruan. Penggunaan berkelanjutan setelah perubahan berarti penerimaan."
+    },
+    "s10": {
+      "title": "Kontak",
+      "email": "Email: privacy@Kidemy.com",
+      "response": "Respons dalam 24 jam"
+    },
+    "coppa": "Patuh COPPA",
+    "gdpr": "Patuh GDPR"
+  },
+  "termsConditions": {
+    "title": "Syarat & Ketentuan",
+    "s1": {
+      "title": "Perjanjian",
+      "body": "Dengan membuat akun, Anda menyetujui Syarat ini. Harus berusia 18+ dan orang tua/wali. Kimee ditujukan untuk anak usia 3-12 tahun. Syarat ini mengikat secara hukum."
+    },
+    "s2": {
+      "title": "Akun Anda",
+      "respLabel": "Tanggung jawab Anda:",
+      "resp": "Memberikan informasi yang akurat • Menjaga kerahasiaan kata sandi dan PIN • Memberi tahu kami tentang akses tidak sah • Tidak membagikan kredensial di luar rumah tangga • Mengawasi penggunaan oleh anak Anda"
+    },
+    "s3": {
+      "title": "Apa yang Disediakan Kimee",
+      "list": "• Island Map Learning: 5 area edukasi (Jungle Adventure untuk Matematika & Logika, Storybook Land untuk Literasi, Artful Archipelago untuk Kreativitas, Empathy Bay untuk SEL, Discovery Cove untuk Kecakapan Hidup)\n• Fitur Personalisasi: aktivitas belajar Daily Path, Peta Jalan 7 Hari, asisten Sparky AI\n• Pelacakan Kemajuan: skor pencapaian, analitik pembelajaran, laporan terperinci\n• Alat Orang Tua: dasbor pengaturan, beberapa profil anak (Premium), perlindungan PIN",
+      "note": "Kami dapat mengubah fitur kapan saja. Layanan disediakan \"sebagaimana adanya\" tanpa jaminan hasil belajar tertentu."
+    },
+    "s4": {
+      "title": "Berbagi Informasi",
+      "warning": "Kami TIDAK PERNAH menjual atau menyewakan informasi anak Anda.",
+      "body": "Berbagi terbatas hanya dengan: pemroses pembayaran (transaksi aman), penyedia hosting (penyimpanan data), persyaratan hukum (jika diwajibkan oleh hukum)"
+    },
+    "s5": {
+      "title": "Paket Langganan",
+      "freeLabel": "Paket Gratis:",
+      "free": "1 profil anak, akses dasar Island Map",
+      "premiumLabel": "Paket Premium:",
+      "premium": "• Bulanan (Rp 49.000)\n• Setengah Tahunan (Rp 252.000 / Hemat 14%)\n• Tahunan (Rp 420.000 / Hemat 29%)",
+      "includes": "Premium mencakup: Beberapa anak, Daily Path, aktivitas lanjutan, laporan kemajuan lengkap",
+      "payment": "Pembayaran: Transfer Bank, Kartu Kredit, E-wallet, QRIS • Perpanjangan otomatis kecuali dibatalkan • Batalkan melalui Pengaturan → Langganan → Kelola Paket • Akses berlanjut hingga periode berakhir • Tidak ada pengembalian dana untuk periode sebagian • Uji coba gratis 7 hari untuk pengguna Premium baru"
+    },
+    "s6": {
+      "title": "Penggunaan yang Dapat Diterima",
+      "dontLabel": "JANGAN:",
+      "dont": "Membagikan akun di luar rumah tangga • Membobol keamanan • Merekayasa balik • Menggunakan bot atau scraper • Mengunggah konten berbahaya • Memberikan informasi palsu • Menggunakan untuk tujuan komersial"
+    },
+    "s7": {
+      "title": "Kepemilikan",
+      "contentLabel": "Konten Kimee:",
+      "content": "Semua game, Island Map, karakter Sparky, grafik, dan perangkat lunak dimiliki oleh Kimee (dilindungi hak cipta) • Anda hanya mendapatkan lisensi penggunaan pribadi non-komersial",
+      "dataLabel": "Data Anda:",
+      "data": "Data profil dan kemajuan tetap milik Anda • Kami menggunakannya hanya sebagaimana dijelaskan dalam Kebijakan Privasi"
+    },
+    "s8": {
+      "title": "Privasi",
+      "intro": "Lihat Kebijakan Privasi kami untuk detail lengkap.",
+      "keyLabel": "Poin penting:",
+      "key": "Kami tidak pernah menjual data anak • Persetujuan orang tua diperlukan • Akses data anak melalui Pengaturan → Privasi Data • Hapus data kapan saja (pemrosesan 30 hari) • Patuh COPPA & GDPR"
+    },
+    "s9": {
+      "title": "Penafian",
+      "body": "Layanan disediakan \"SEBAGAIMANA ADANYA\" tanpa jaminan • Tidak ada jaminan layanan tanpa gangguan • Tidak ada jaminan hasil belajar tertentu • Kami berupaya menjaga kualitas tetapi konten mungkin memiliki kesalahan"
+    },
+    "s10": {
+      "title": "Batasan Tanggung Jawab",
+      "body": "Kimee tidak bertanggung jawab atas: kerusakan tidak langsung, kehilangan data, gangguan layanan, akses akun tidak sah • Tanggung jawab maksimum dibatasi pada jumlah yang dibayarkan dalam 12 bulan terakhir"
+    },
+    "s11": {
+      "title": "Penghentian Akun",
+      "youLabel": "Anda dapat:",
+      "you": "Menghapus akun kapan saja melalui Pengaturan → Keamanan → Hapus Akun (data dihapus dalam 30 hari)",
+      "weLabel": "Kami dapat:",
+      "we": "Menangguhkan/menghentikan karena pelanggaran Syarat, penipuan, penyalahgunaan, atau tidak membayar (pemberitahuan jika memungkinkan)"
+    },
+    "s12": {
+      "title": "Perubahan & Pembaruan",
+      "body": "Kami dapat memperbarui Syarat kapan saja • Perubahan diberitahukan melalui email • Penggunaan berkelanjutan = penerimaan • Jika tidak setuju, hapus akun"
+    },
+    "s13": {
+      "title": "Kontak",
+      "legalTeam": "Tim Hukum Kimee",
+      "email": "Email: legal@kidemy.com"
+    },
+    "footer": "Dengan membuat akun, Anda menyetujui Syarat ini dan Kebijakan Privasi kami."
+  }
+}

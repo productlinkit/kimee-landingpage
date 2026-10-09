@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import './Preloader.css';
 
 /**
@@ -6,14 +7,15 @@ import './Preloader.css';
  * transisi CSS-nya sempat berjalan.
  */
 export default function Preloader({ progress, done }) {
+  const { t } = useTranslation();
   return (
     <div id="preloader" className={done ? 'done' : undefined} aria-hidden="true">
       <div className="pre-card">
         <div className="pre-avatar">
           <img src="/logo-kimee.png" alt="" />
         </div>
-        <h2 className="pre-title">Loading your adventure…</h2>
-        <p className="pre-sub">Kimee is preparing your world of learning</p>
+        <h2 className="pre-title">{t('common.loadingTitle')}</h2>
+        <p className="pre-sub">{t('common.loadingSub')}</p>
         <div className="pre-bar">
           <i style={{ width: `${progress}%` }} />
         </div>

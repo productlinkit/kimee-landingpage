@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { useCallback, useRef, useState } from 'react';
-import { SPARKY } from '../../config/content';
+import { useContent } from '../../config/content';
 import { useSparkyTimeline } from './useSparkyTimeline';
 import './Sparky.css';
 
@@ -19,6 +20,8 @@ import './Sparky.css';
  * saat timeline menganimasikan x/y/scale.
  */
 export default function Sparky({ enabled }) {
+  const { t } = useTranslation();
+  const { SPARKY } = useContent();
   const sectionRef = useRef(null);
   const stageRef = useRef(null);
   const marqueeRef = useRef(null);
@@ -86,7 +89,7 @@ export default function Sparky({ enabled }) {
           className="sparky-device"
           ref={deviceRef}
           src="/sparky/device.webp"
-          alt="Sparky — asisten AI yang menjawab pertanyaan orang tua"
+          alt={t('sparky.alt')}
         />
 
         <div className="sparky-copy" ref={copyRef}>
